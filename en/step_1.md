@@ -1,59 +1,106 @@
-## Introduction
+Each of the starter animations in the `animation.css` file has an `animation` property group that states how the animation should run:
 
-Add project description here. What will learners be making? Broadly what skills will they be learning?
-
-### What you will make
-
---- no-print ---
-Add instructions for interacting with the embedded content here.
-
-<div class="scratch-preview">
-  <iframe allowtransparency="true" width="485" height="402" src="https://scratch.mit.edu/projects/embed/160619869/?autostart=false" frameborder="0"></iframe>
-</div>
---- /no-print ---
-
---- print-only ---
-![Complete project](images/showcase_static.png)
---- /print-only ---
-
---- collapse ---
+--- code ---
 ---
-title: What you will need
+language: html
+filename: animation.css
+line_numbers: true
+line_number_start: 1
+line_highlights: 2
 ---
-### Hardware
+.spinme {
+  animation: rotate-center linear 8s 2; /* Time taken for animation and number of repetitions */
+  display: inline-block;
+}
+ 
+--- /code ---
 
-+ A computer or tablet capable of running Scratch 3
+The `animation` line in the `spinme` example is broken up into:
++ `rotate-center` - the name of the animation
++ `linear` - the animation timing (linear is the same playing speed throughout, other examples are `ease`, `ease-in` and `ease-out`)
++ `8s` - the duration of the animation in seconds
++ `2` - the number of times the animation should run (can be `infinite` for continuous running
 
-### Software
+Changing any of these values will alter the animation. Another way to customise the animaton is by adjusting the `@keyframes` rule.  `@keyframes` control how the element should look when a percentage of the running animation is complete.  
 
-+ Scratch 3 (either [online](https://scratch.mit.edu/){:target="_blank"} or [offline](https://scratch.mit.edu/download){:target="_blank"})
-+ Python 3
-+ This project can be completed in a web browser using [trinket.io](https://trinket.io/)
+In the `rotate-center` animation used by `spinme` the animation rotates the object from 0 degrees at the start of the animation (0%), round to 360 degrees at the end of the animation (100%). 
 
-### Downloads
-
-+ Download the project [starter file](https://rpf.io/p/en/projectName-go){:target="_blank"} if working offline
-
---- /collapse ---
-
---- collapse ---
+--- code ---
 ---
-title: What you will learn
+language: html
+filename: animation.css
+line_numbers: true
+line_number_start: 6
+---
+@keyframes rotate-center {
+/* The spin me animation code */
+  0% { /* Rotate from 0 to 360 degrees */
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+ 
+--- /code ---
+
+Animations can have specific styles applied at other percentage points during the animation run. For example the `scale` animation has specified points at 0%, 20%, 40%, 60% and 80%:
+
+--- code ---
+---
+language: html
+filename: animation.css
+line_numbers: true
+line_number_start: 6
 ---
 
-+ Learning objective 1
-+ Learning objective 2
-+ Learning objective 3
+@keyframes scale {
+  /* The scale animation code */
+  0% {
+    transform: scale(1, 1);
+  }
+  20% {
+    transform: scale(1.1, 1.1);
+  }
+  40% {
+    transform: scale(1.2, 1.2);
+  }
+  60% {
+    transform: scale(1.1, 1.1);
+  }
+  80% {
+    transform: scale(1, 1);
+  }
+}
+ 
+--- /code ---
 
---- /collapse ---
+The animation can have more than one style changed at each point. For example the `bounce` animation changes the size and Y-coordinate to create a realistic bounce effect:
 
---- collapse ---
+--- code ---
 ---
-title: Additional information for educators
+language: html
+filename: animation.css
+line_numbers: true
+line_number_start: 22
 ---
 
-You can download the completed project [here](https://rpf.io/p/en/projectName-get){:target="_blank"}.
+@keyframes bounce {
+  /* The bounce animation code */
+  0% {
+    transform: scale(1, 1) translateY(0); /* Starting position and actual size */
+  }
+  10% {
+    transform: scale(1.1, 0.9) translateY(0); /* Grow width and shrink height for pre bounce squash effect */
+  }
+  30% {
+    transform: scale(1, 1) translateY(-6rem); /* Return to actual size and move emoji up 100px from current position */
+  }
+  50% {
+    transform: scale(1, 1) translateY(0); /* Move emoji back to starting position */
+  }
+}
+ 
+--- /code ---
 
-If you need to print this project, please use the [printer-friendly version](https://projects.raspberrypi.org/en/projects/projectName/print){:target="_blank"}.
-
---- /collapse ---
+You can change colour, position, size, rotation and many more properties by changing the `@keyframes` code.
