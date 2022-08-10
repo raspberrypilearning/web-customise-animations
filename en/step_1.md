@@ -23,7 +23,7 @@ The `animation` line in the `spinme` example is broken up into:
 
 Change any of these values to alter the animation. Another way to customise the animation is to adjust the `@keyframes` rule.  `@keyframes` control how the element should look when a percentage of the running animation is complete.  
 
-In the `rotate-center` animation used by `spinme` the animation rotates the object from 0 degrees at the start of the animation (`0%`), to 360 degrees at the end of the animation (`100%`). 
+In the `rotate-center` animation used by `spinme`, the animation rotates the object from 0 degrees at the start of the animation (`0%`), to 360 degrees at the end of the animation (`100%`). 
 
 --- code ---
 ---
