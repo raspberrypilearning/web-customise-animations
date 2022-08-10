@@ -16,10 +16,10 @@ line_highlights: 2
 --- /code ---
 
 The `animation` line in the `spinme` example is broken up into:
-+ `rotate-center`: The name of the animation
-+ `linear`: The animation timing (linear is the same playing speed throughout, other examples are `ease`, `ease-in`, and `ease-out`)
-+ `8s`: The duration of the animation in seconds
-+ `2`: The number of times the animation should run (can be `infinite` for continuous running) 
++ `rotate-center`: the name of the animation
++ `linear`: the animation timing (linear is the same playing speed throughout, other examples are `ease`, `ease-in`, and `ease-out`)
++ `8s`: the duration of the animation in seconds
++ `2`: the number of times the animation should run (can be `infinite` for continuous running) 
 
 Change any of these values to alter the animation. Another way to customise the animation is to adjust the `@keyframes` rule.  `@keyframes` control how the element should look when a percentage of the running animation is complete.  
 
