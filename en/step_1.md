@@ -16,14 +16,14 @@ line_highlights: 2
 --- /code ---
 
 The `animation` line in the `spinme` example is broken up into:
-+ `rotate-center` - the name of the animation
-+ `linear` - the animation timing (linear is the same playing speed throughout, other examples are `ease`, `ease-in` and `ease-out`)
-+ `8s` - the duration of the animation in seconds
-+ `2` - the number of times the animation should run (can be `infinite` for continuous running
++ `rotate-center`: the name of the animation
++ `linear`: the animation timing (linear is the same playing speed throughout, other examples are `ease`, `ease-in`, and `ease-out`)
++ `8s`: the duration of the animation in seconds
++ `2`: the number of times the animation should run (can be `infinite` for continuous running) 
 
-Changing any of these values will alter the animation. Another way to customise the animaton is by adjusting the `@keyframes` rule.  `@keyframes` control how the element should look when a percentage of the running animation is complete.  
+Change any of these values to alter the animation. Another way to customise the animation is to adjust the `@keyframes` rule.  `@keyframes` control how the element should look when a percentage of the running animation is complete.  
 
-In the `rotate-center` animation used by `spinme` the animation rotates the object from 0 degrees at the start of the animation (0%), round to 360 degrees at the end of the animation (100%). 
+In the `rotate-center` animation used by `spinme`, the animation rotates the object from 0 degrees at the start of the animation (`0%`), to 360 degrees at the end of the animation (`100%`). 
 
 --- code ---
 ---
@@ -44,7 +44,7 @@ line_number_start: 6
  
 --- /code ---
 
-Animations can have specific styles applied at other percentage points during the animation run. For example the `scale` animation has specified points at 0%, 20%, 40%, 60% and 80%:
+Animations can have specific styles applied at other percentage points during the animation run. For example, the `scale` animation has specified points at 0%, 20%, 40%, 60%, and 80%. 
 
 --- code ---
 ---
@@ -75,7 +75,7 @@ line_number_start: 6
  
 --- /code ---
 
-The animation can have more than one style changed at each point. For example the `bounce` animation changes the size and Y-coordinate to create a realistic bounce effect:
+The animation can have more than one style changed at each point. For example, the `bounce` animation changes the size and y-coordinate to create a realistic bounce effect.
 
 --- code ---
 ---
@@ -103,4 +103,4 @@ line_number_start: 22
  
 --- /code ---
 
-You can change colour, position, size, rotation and many more properties by changing the `@keyframes` code.
+You can change colour, position, size, rotation, and many more properties if you change the `@keyframes` code.
