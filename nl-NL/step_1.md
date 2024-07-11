@@ -1,4 +1,4 @@
-Each of the starter animations in the `animation.css` file has an `animation` property group that states how the animation should run:
+Elk van de startanimaties in het `animation. css`-bestand heeft een `animation`-eigenschapsgroep die aangeeft hoe de animatie moet worden uitgevoerd:
 
 ## --- code ---
 
@@ -10,22 +10,22 @@ line_highlights: 2
 -------------------------------------------------------
 
 .spinme {
-animation: rotate-center linear 8s 2; /\* Time taken for animation and number of repetitions \*/
+animation: rotate-center linear 8s 2; /\* Benodigde tijd voor de animatie en aantal herhalingen \*/
 display: inline-block;
 }
 
 \--- /code ---
 
-The `animation` line in the `spinme` example is broken up into:
+De `animation` regel in het `spinme` voorbeeld is opgesplitst in:
 
-- `rotate-center`: the name of the animation
-- `linear`: the animation timing (linear is the same playing speed throughout, other examples are `ease`, `ease-in`, and `ease-out`)
-- `8s`: the duration of the animation in seconds
-- `2`: the number of times the animation should run (can be `infinite` for continuous running)
+- `rotate-center`: de naam van de animatie
+- `linear`: de timing van de animatie (linear is overal dezelfde afspeelsnelheid, andere voorbeelden zijn `ease`, `ease-in` en `ease-out`)
+- `8s`: de duur van de animatie in seconden
+- `2`: het aantal keren dat de animatie moet worden uitgevoerd (kan `infinite` (oneindig) zijn voor continu afspelen)
 
-Change any of these values to alter the animation. Another way to customise the animation is to adjust the `@keyframes` rule.  `@keyframes` control how the element should look when a percentage of the running animation is complete.
+Wijzig een van deze waarden om de animatie te wijzigen. Een andere manier om de animatie aan te passen is door de `@keyframes`-regel aan te passen.  `@keyframes` bepalen hoe het element eruit moet zien wanneer een percentage van de lopende animatie is voltooid.
 
-In the `rotate-center` animation used by `spinme`, the animation rotates the object from 0 degrees at the start of the animation (`0%`), to 360 degrees at the end of the animation (`100%`).
+In de `rotate-center` animatie gebruikt door `spinme`, draait de animatie het object vanaf 0 graden aan het begin van de animatie (`0%`), tot 360 graden aan het einde van de animatie (`100%`).
 
 ## --- code ---
 
@@ -36,8 +36,8 @@ line_number_start: 6
 ------------------------------------------------------------------------------
 
 @keyframes rotate-center {
-/\* The spin me animation code _/
-0% { /_ Rotate from 0 to 360 degrees \*/
+/\* De spin me animatie code _/
+0% { /_ Rotateer van 0 tot 360 graden \*/
 transform: rotate(0);
 }
 100% {
@@ -47,7 +47,7 @@ transform: rotate(360deg);
 
 \--- /code ---
 
-Animations can have specific styles applied at other percentage points during the animation run. For example, the `scale` animation has specified points at 0%, 20%, 40%, 60%, and 80%.
+Op animaties kunnen specifieke stijlen worden toegepast op andere procentpunten tijdens de animatie-uitvoering. De 'scale'-animatie heeft bijvoorbeeld vooraf bepaalde punten op 0%, 20%, 40%, 60% en 80%.
 
 ## --- code ---
 
@@ -58,7 +58,7 @@ line_number_start: 6
 ------------------------------------------------------------------------------
 
 @keyframes scale {
-/\* The scale animation code \*/
+/\* De scale animatie code \*/
 0% {
 transform: scale(1, 1);
 }
@@ -78,7 +78,7 @@ transform: scale(1, 1);
 
 \--- /code ---
 
-The animation can have more than one style changed at each point. For example, the `bounce` animation changes the size and y-coordinate to create a realistic bounce effect.
+Bij de animatie kan op elk punt meer dan één stijl worden gewijzigd. De 'bounce'-animatie verandert bijvoorbeeld de grootte en de y-coördinaat om een realistisch stuitereffect te creëren.
 
 ## --- code ---
 
