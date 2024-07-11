@@ -89,21 +89,21 @@ line_number_start: 22
 -------------------------------------------------------------------------------
 
 @keyframes bounce {
-/\* The bounce animation code _/
+/\* De bounce animatie code _/
 0% {
-transform: scale(1, 1) translateY(0); /_ Starting position and actual size _/
+transform: scale(1, 1) translateY(0); /_ Startpositie en huidige grootte _/
 }
 10% {
-transform: scale(1.1, 0.9) translateY(0); /_ Grow width and shrink height for pre bounce squash effect _/
+transform: scale(1.1, 0.9) translateY(0); /_ Maak breder en minder hoog voor een pre-bounce squash effect _/
 }
 30% {
-transform: scale(1, 1) translateY(-6rem); /_ Return to actual size and move emoji up 100px from current position _/
+transform: scale(1, 1) translateY(-6rem); /_ Keer terug naar huidige grootte en verplaats de emoji 100 px naar boven vanaf de huidige positie _/
 }
 50% {
-transform: scale(1, 1) translateY(0); /_ Move emoji back to starting position \*/
+transform: scale(1, 1) translateY(0); /_ Verplaats emoji terug naar startpositie \*/
 }
 }
 
 \--- /code ---
 
-You can change colour, position, size, rotation, and many more properties if you change the `@keyframes` code.
+Je kunt kleur, positie, grootte, rotatie en nog veel meer eigenschappen veranderen als je de `@keyframes` code verandert.
